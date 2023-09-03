@@ -1,0 +1,11 @@
+QMainWindow, QDialog {
+    background: palette(base);
+}
+
+Editor {
+    border: 0;
+}
+
+AboutDialog QTextEdit {
+    border: 0;
+}
