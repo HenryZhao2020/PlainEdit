@@ -12,8 +12,9 @@ MainWindow::MainWindow() {
     saved = true;
     windows.append(this);
 
-    setWindowTitle(title + " - PlainEdit");
     resize(1080, 720);
+    setWindowTitle(title + " - PlainEdit");
+    setAttribute(Qt::WA_DeleteOnClose);
 
     editor = new Editor(this);
     editor->setWordWrapped(Attr::wrapWord);
