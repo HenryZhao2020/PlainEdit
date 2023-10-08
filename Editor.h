@@ -10,13 +10,17 @@ class Editor : public QPlainTextEdit {
 public:
     Editor(MainWindow *window);
 
-    void setWordWrap(bool wrap);
+    void setWordWrapped(bool wrapped);
     void removeSelectedText();
     void goTo(int line, int column);
     QTextCursor findPrevious();
     QTextCursor findNext();
     void replace();
     void replaceAll();
+
+protected:
+    void dragEnterEvent(QDragEnterEvent *event) override;
+    void dropEvent(QDropEvent *event) override;
 
 private:
     MainWindow *window;
