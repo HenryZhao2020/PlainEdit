@@ -5,7 +5,7 @@
 
 const QString EXTENSION_FILTER = "Text Documents (*.txt)\nAll Files (*.*)";
 
-QList<MainWindow *> MainWindow::windows = {};
+QList<MainWindow *> MainWindow::windows;
 
 MainWindow::MainWindow() {
     title = "Untitled";
