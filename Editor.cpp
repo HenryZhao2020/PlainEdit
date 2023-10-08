@@ -15,8 +15,8 @@ Editor::Editor(MainWindow *window) : QPlainTextEdit(window) {
     setPalette(newPalette);
 }
 
-void Editor::setWordWrap(bool wrap) {
-    if (wrap) {
+void Editor::setWordWrapped(bool wrapped) {
+    if (wrapped) {
         setWordWrapMode(QTextOption::WordWrap);
     } else {
         setWordWrapMode(QTextOption::NoWrap);
@@ -113,6 +113,23 @@ void Editor::replaceAll() {
         cursor.insertText(Attr::replaceTarget);
 
         cursor = findNext();
+    }
+}
+
+void Editor::dragEnterEvent(QDragEnterEvent *event) {
+    if (event->mimeData()->hasUrls()) {
+        event->acceptProposedAction();
+    }
+}
+
+void Editor::dropEvent(QDropEvent *event) {
+    auto mimeData = event->mimeData();
+    if (!mimeData->hasUrls()) {
+        return;
+    }
+
+    for (auto &url : mimeData->urls()) {
+        MainWindow::open(url.toLocalFile());
     }
 }
 
