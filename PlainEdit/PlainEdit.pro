@@ -16,7 +16,7 @@ QMAKE_TARGET_DESCRIPTION = "PlainEdit"
 
 RC_ICONS = "Logo.ico"
 
-VERSION = 1.1.0
+VERSION = 1.1.1
 
 SOURCES += *.cpp
 
