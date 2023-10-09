@@ -38,11 +38,11 @@ int main(int argc, char *argv[]) {
     QObject::connect(&app, &SingleApplication::receivedMessage,
                      &app, &receivedMessage);
 
-    auto timer = new QTimer();
-    QObject::connect(timer, &QTimer::timeout, &app, [] {
+    QTimer timer;
+    QObject::connect(&timer, &QTimer::timeout, &app, [] {
         QApplication::setStyle("Fusion");
     });
-    timer->start(1000);
+    timer.start(1000);
 
     if (argc == 1) {
         MainWindow::newWindow();
