@@ -12,6 +12,7 @@ public:
     MainWindow();
     MainWindow(const QString &path);
 
+    static QList<MainWindow *> getWindows();
     Editor *getEditor();
     MenuBar *getMenuBar();
 

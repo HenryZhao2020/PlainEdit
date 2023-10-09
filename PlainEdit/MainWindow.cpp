@@ -13,7 +13,7 @@ MainWindow::MainWindow() {
     windows.append(this);
 
     resize(1080, 720);
-    setWindowTitle(title + " - PlainEdit");
+    setWindowTitle(title + " - PlainEdit");    
     setAttribute(Qt::WA_DeleteOnClose);
 
     editor = new Editor(this);
@@ -49,6 +49,10 @@ MainWindow::MainWindow(const QString &path) : MainWindow() {
     editor->blockSignals(true);
     editor->setPlainText(File::readAll(path));
     editor->blockSignals(false);
+}
+
+QList<MainWindow *> MainWindow::getWindows() {
+    return windows;
 }
 
 Editor *MainWindow::getEditor() {
