@@ -34,15 +34,11 @@ int main(int argc, char *argv[]) {
 
     app.setStyle("Fusion");
     app.setStyleSheet(File::readAll("Styles.qss"));
+    WinAPI::detectModeChange();
+    WinAPI::detectDpiChange();
     QObject::connect(&app, &SingleApplication::aboutToQuit, &app, &Attr::save);
     QObject::connect(&app, &SingleApplication::receivedMessage,
                      &app, &receivedMessage);
-
-    QTimer timer;
-    QObject::connect(&timer, &QTimer::timeout, &app, [] {
-        QApplication::setStyle("Fusion");
-    });
-    timer.start(1000);
 
     if (argc == 1) {
         MainWindow::newWindow();

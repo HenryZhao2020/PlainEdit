@@ -6,4 +6,5 @@
 
 #include "File.h"
 #include "Icon.h"
+#include "WinAPI.h"
 #include "SingleApplication/SingleApplication"
