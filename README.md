@@ -4,4 +4,4 @@ An alternative to Windows Notepad with additional features, such as Advanced Sea
 - Dark Mode
 - View Recent Files
 - Enhanced Find & Replace
-- Better Support for Multiple Windows
+- Better Support for Opening Multiple Files
