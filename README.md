@@ -1,5 +1,5 @@
 # PlainEdit
-A Better Alternative to Windows Notepad:
+An alternative to Windows Notepad with additional features, such as Advanced Search & Replace, Dark Mode, and more!
 
 - Dark Mode
 - View Recent Files
