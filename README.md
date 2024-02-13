@@ -58,4 +58,4 @@ Languages:
 
 About Dialog:
 
-![image](https://github.com/HenryZhao2020/PlainEdit/assets/75873192/635e6104-2b9c-48c0-9891-9b9e901c37e7)
+![image](https://github.com/HenryZhao2020/PlainEdit/assets/75873192/873b33fa-e605-42f6-827e-1228ffe21eca)
