@@ -43,7 +43,7 @@ QMAKE_TARGET_DESCRIPTION = "PlainEdit"
 
 RC_ICONS = "Logo.ico"
 
-VERSION = 2.0.0
+VERSION = 2.0.1
 
 TRANSLATIONS += \
     PlainEdit_zh_CN.ts
