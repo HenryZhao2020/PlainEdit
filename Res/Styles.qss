@@ -1,0 +1,16 @@
+QDialog {
+    background: palette(base);
+}
+
+Editor {
+    border: 0;
+}
+
+StatusBar QLabel {
+    margin-left: 20;
+    margin-right: 20;
+}
+
+AboutDialog QTextEdit {
+    border: 0;
+}
